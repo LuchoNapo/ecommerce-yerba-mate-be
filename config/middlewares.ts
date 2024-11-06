@@ -4,7 +4,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://ecommerce-yerba-mate.vercel.app/'], 
+      origin: ['https://ecommerce-yerba-mate.vercel.app'], 
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       credentials: true
