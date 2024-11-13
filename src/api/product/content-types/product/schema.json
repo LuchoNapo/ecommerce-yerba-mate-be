@@ -64,6 +64,20 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "brand": {
+      "type": "enumeration",
+      "enum": [
+        "Nobleza Gaucha",
+        "Canarias",
+        "Cbse",
+        "Cosmico",
+        "Cruz de Malta",
+        "Playadito",
+        "Porongo",
+        "Taragui",
+        "Verde Flor"
+      ]
     }
   }
 }

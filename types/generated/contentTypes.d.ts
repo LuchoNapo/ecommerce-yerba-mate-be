@@ -581,6 +581,19 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     >;
     taste: Schema.Attribute.Enumeration<['tradicional', 'suave']>;
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    brand: Schema.Attribute.Enumeration<
+      [
+        'Nobleza Gaucha',
+        'Canarias',
+        'Cbse',
+        'Cosmico',
+        'Cruz de Malta',
+        'Playadito',
+        'Porongo',
+        'Taragui',
+        'Verde Flor',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
