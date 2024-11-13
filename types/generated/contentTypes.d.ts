@@ -586,14 +586,15 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         'Nobleza Gaucha',
         'Canarias',
         'Cbse',
-        'Cosmico',
+        'C\u00F3smico',
         'Cruz de Malta',
         'Playadito',
         'Porongo',
-        'Taragui',
-        'Verde Flor',
+        'Tarag\u00FCi',
+        'Verdeflor',
       ]
     >;
+    weight: Schema.Attribute.Enumeration<['one_kg', 'half_kg']>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

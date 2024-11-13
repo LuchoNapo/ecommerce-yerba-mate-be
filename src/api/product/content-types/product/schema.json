@@ -71,12 +71,19 @@
         "Nobleza Gaucha",
         "Canarias",
         "Cbse",
-        "Cosmico",
+        "Cósmico",
         "Cruz de Malta",
         "Playadito",
         "Porongo",
-        "Taragui",
-        "Verde Flor"
+        "Taragüi",
+        "Verdeflor"
+      ]
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "one_kg",
+        "half_kg"
       ]
     }
   }
