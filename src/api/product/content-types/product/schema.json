@@ -76,7 +76,10 @@
         "Playadito",
         "Porongo",
         "Taragüi",
-        "Verdeflor"
+        "Verdeflor",
+        "Stanley",
+        "Thermio",
+        "Lumilagro"
       ]
     },
     "weight": {
@@ -84,6 +87,14 @@
       "enum": [
         "one_kg",
         "half_kg"
+      ]
+    },
+    "material": {
+      "type": "enumeration",
+      "enum": [
+        "acero",
+        "calabaza",
+        "algarrobo"
       ]
     }
   }

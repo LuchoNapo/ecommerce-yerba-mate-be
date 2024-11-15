@@ -592,9 +592,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         'Porongo',
         'Tarag\u00FCi',
         'Verdeflor',
+        'Stanley',
+        'Thermio',
+        'Lumilagro',
       ]
     >;
     weight: Schema.Attribute.Enumeration<['one_kg', 'half_kg']>;
+    material: Schema.Attribute.Enumeration<['acero', 'calabaza', 'algarrobo']>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
