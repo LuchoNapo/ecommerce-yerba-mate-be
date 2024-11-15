@@ -76,10 +76,7 @@
         "Playadito",
         "Porongo",
         "Taragüi",
-        "Verdeflor",
-        "Stanley",
-        "Thermio",
-        "Lumilagro"
+        "Verdeflor"
       ]
     },
     "weight": {
@@ -95,6 +92,15 @@
         "acero",
         "calabaza",
         "algarrobo"
+      ]
+    },
+    "termoBrand": {
+      "type": "enumeration",
+      "enum": [
+        "Taragui",
+        "Stanley",
+        "Luminox",
+        "Thermio"
       ]
     }
   }
