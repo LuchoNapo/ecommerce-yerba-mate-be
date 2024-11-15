@@ -611,6 +611,44 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTermoTermo extends Struct.CollectionTypeSchema {
+  collectionName: 'termos';
+  info: {
+    singularName: 'termo';
+    pluralName: 'termos';
+    displayName: 'Termo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    productName: Schema.Attribute.String;
+    slug: Schema.Attribute.UID;
+    description: Schema.Attribute.Text;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    isFeatured: Schema.Attribute.Boolean;
+    active: Schema.Attribute.Boolean;
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    price: Schema.Attribute.Decimal;
+    brand: Schema.Attribute.Enumeration<
+      ['Stanley', 'Tarag\u00FCi', 'Termio', 'Luminox']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::termo.termo'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -996,6 +1034,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::order.order': ApiOrderOrder;
       'api::product.product': ApiProductProduct;
+      'api::termo.termo': ApiTermoTermo;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

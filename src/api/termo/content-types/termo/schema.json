@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "termos",
+  "info": {
+    "singularName": "termo",
+    "pluralName": "termos",
+    "displayName": "Termo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "isFeatured": {
+      "type": "boolean"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "brand": {
+      "type": "enumeration",
+      "enum": [
+        "Stanley",
+        "Taragüi",
+        "Termio",
+        "Luminox"
+      ]
+    }
+  }
+}
