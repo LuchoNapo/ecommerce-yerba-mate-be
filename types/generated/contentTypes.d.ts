@@ -599,6 +599,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     termoBrand: Schema.Attribute.Enumeration<
       ['Taragui', 'Stanley', 'Luminox', 'Thermio']
     >;
+    tipeOfStraw: Schema.Attribute.Enumeration<['Plana', 'Resorte', 'Pala']>;
+    typeWeed: Schema.Attribute.Enumeration<['Sin Palo', 'Con Palo']>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

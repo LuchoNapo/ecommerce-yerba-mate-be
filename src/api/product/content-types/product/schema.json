@@ -102,6 +102,21 @@
         "Luminox",
         "Thermio"
       ]
+    },
+    "tipeOfStraw": {
+      "type": "enumeration",
+      "enum": [
+        "Plana",
+        "Resorte",
+        "Pala"
+      ]
+    },
+    "typeWeed": {
+      "type": "enumeration",
+      "enum": [
+        "Sin Palo",
+        "Con Palo"
+      ]
     }
   }
 }
