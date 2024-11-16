@@ -576,10 +576,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     isFeatured: Schema.Attribute.Boolean;
     active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     price: Schema.Attribute.Decimal;
-    origin: Schema.Attribute.Enumeration<
-      ['Corrientes', 'Brasil', 'Misiones', 'San Juan', 'Mendoza']
-    >;
-    taste: Schema.Attribute.Enumeration<['tradicional', 'suave']>;
+    taste: Schema.Attribute.Enumeration<['tradicional', 'suave', 'saborizado']>;
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     brand: Schema.Attribute.Enumeration<
       [

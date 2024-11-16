@@ -43,21 +43,12 @@
     "price": {
       "type": "decimal"
     },
-    "origin": {
-      "type": "enumeration",
-      "enum": [
-        "Corrientes",
-        "Brasil",
-        "Misiones",
-        "San Juan",
-        "Mendoza"
-      ]
-    },
     "taste": {
       "type": "enumeration",
       "enum": [
         "tradicional",
-        "suave"
+        "suave",
+        "saborizado"
       ]
     },
     "category": {
