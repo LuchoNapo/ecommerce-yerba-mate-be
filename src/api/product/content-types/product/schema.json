@@ -94,7 +94,7 @@
         "Thermio"
       ]
     },
-    "tipeOfStraw": {
+    "typeOfStraw": {
       "type": "enumeration",
       "enum": [
         "Plana",
