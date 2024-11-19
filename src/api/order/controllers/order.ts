@@ -18,8 +18,8 @@ module.exports = factories.createCoreController('api::order.order', ({ strapi })
             const lineItems = await Promise.all(
 
                 products.map(async (product) => {
-                    // const item = await strapi.service("api::product.product").findOne(product.id);
-                    // console.log(item);
+                    const item = await strapi.service("api::product.product").findOne(product.id);
+                    console.log(item);
 
                     return {
                         price_data: {
@@ -40,11 +40,11 @@ module.exports = factories.createCoreController('api::order.order', ({ strapi })
                 payment_method_types: ["card"],
                 mode: "payment",
                 success_url: process.env.CLIENT_URL + "/success",
-                cancel_url: process.env.CLIENT_URL + "/sucessError",
+                cancel_url: process.env.CLIENT_URL + "/error",
                 line_items: lineItems,
             })
 
-            // await strapi.service("api::order.order").create({ data: { products, stripeID: session.id } });
+            await strapi.service("api::order.order").create({ data: { products, stripeID: session.id } });
 
             return { stripeSession: session };
         } catch (error) {
