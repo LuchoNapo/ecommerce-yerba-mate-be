@@ -10,6 +10,7 @@ import { factories } from '@strapi/strapi'
 module.exports = factories.createCoreController('api::order.order', ({ strapi }) => ({
     async create(ctx) {
 
+
         const { products } = ctx.request.body;
 
 
@@ -43,8 +44,14 @@ module.exports = factories.createCoreController('api::order.order', ({ strapi })
                 cancel_url: process.env.CLIENT_URL + "/error",
                 line_items: lineItems,
             })
+            console.log("Stripe Session:", session.id);
 
-            await strapi.service("api::order.order").create({ data: { products, stripeID: session.id } });
+            const order = await strapi.service("api::order.order").create({
+                data: {
+                    products,
+                    stripeId: session.id,
+                },
+            });
 
             return { stripeSession: session };
         } catch (error) {
