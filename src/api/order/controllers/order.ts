@@ -25,7 +25,7 @@ module.exports = factories.createCoreController('api::order.order', ({ strapi })
                         price_data: {
                             currency: "ARS",
                             product_data: {
-                                name: item.productName
+                                name: product.productName
                             },
                             unit_amount: Math.round(product.price * 100),
                         },
